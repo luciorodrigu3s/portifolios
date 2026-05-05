@@ -239,18 +239,28 @@ img {
 }
 
 .archive-table .col-area {
-  width: 32%;
+  width: 42%;
   color: var(--color-fg);
 }
 
 .archive-table .col-country {
-  width: 22%;
+  width: 28%;
   color: var(--color-muted);
 }
 
 .archive-table .col-quality {
   width: 16%;
   letter-spacing: -0.05em;
+}
+
+.archive-table--no-quality .col-name {
+  width: 36%;
+}
+.archive-table--no-quality .col-area {
+  width: 40%;
+}
+.archive-table--no-quality .col-country {
+  width: 24%;
 }
 
 .archive-table .row-sub {

@@ -23,7 +23,7 @@ export default function App() {
   const [selectedCountries, setSelectedCountries] = useState<Set<string>>(
     new Set(),
   );
-  const [sort, setSort] = useState<SortKey>('quality-desc');
+  const [sort, setSort] = useState<SortKey>('name-asc');
   const [view, setView] = useState<ViewMode>('list');
   const [filterOpen, setFilterOpen] = useState(false);
 

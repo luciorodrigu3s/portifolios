@@ -47,7 +47,8 @@ export function PortfolioCard({ item }: Props) {
       <div className="card__name">{item.name}</div>
       <p className="card__desc">{item.description}</p>
       <div className="card__foot">
-        <span aria-label={`Qualidade ${item.quality}`}>{item.quality}</span>
+        {/* Quality stars hidden for now */}
+        <span aria-hidden="true" />
         <span className="card__foot-cta">View site →</span>
       </div>
     </a>

@@ -24,7 +24,7 @@ export function ArchiveTable({ items }: Props) {
   }
 
   return (
-    <table className="archive-table" aria-label="Portfolio archive">
+    <table className="archive-table archive-table--no-quality" aria-label="Portfolio archive">
       <thead>
         <tr>
           <th scope="col" className="col-name">
@@ -36,9 +36,9 @@ export function ArchiveTable({ items }: Props) {
           <th scope="col" className="col-country">
             País
           </th>
-          <th scope="col" className="col-quality">
-            Qualidade
-          </th>
+          {/* Quality column hidden for now — re-enable by removing the
+              archive-table--no-quality modifier and uncommenting the cells. */}
+          {/* <th scope="col" className="col-quality">Qualidade</th> */}
         </tr>
       </thead>
       <tbody>
@@ -57,9 +57,7 @@ export function ArchiveTable({ items }: Props) {
             </td>
             <td className="col-area">{item.area}</td>
             <td className="col-country">{item.country}</td>
-            <td className="col-quality" aria-label={`Qualidade ${item.quality}`}>
-              {item.quality}
-            </td>
+            {/* <td className="col-quality" aria-label={`Qualidade ${item.quality}`}>{item.quality}</td> */}
           </tr>
         ))}
       </tbody>

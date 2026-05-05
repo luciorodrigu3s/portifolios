@@ -12,6 +12,14 @@ export interface PortfolioItem {
   thumbnail: string;
 }
 
-export type SortKey = 'name-asc' | 'name-desc' | 'quality-desc' | 'quality-asc';
+export type SortKey =
+  | 'name-asc'
+  | 'name-desc'
+  | 'area-asc'
+  | 'area-desc'
+  | 'country-asc'
+  | 'country-desc'
+  | 'quality-desc'
+  | 'quality-asc';
 
 export type ViewMode = 'list' | 'grid';

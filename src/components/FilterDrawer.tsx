@@ -33,6 +33,10 @@ export function FilterDrawer({
   totalCount,
 }: Props) {
   const searchRef = useRef<HTMLInputElement>(null);
+  const hasActiveFilters =
+    query.trim().length > 0 ||
+    selectedAreas.size > 0 ||
+    selectedCountries.size > 0;
 
   useEffect(() => {
     if (!open) return;
@@ -128,7 +132,7 @@ export function FilterDrawer({
               Limpar
             </Pill>
             <Pill variant="dark" onClick={onClose}>
-              Fechar
+              {hasActiveFilters ? 'Filtrar' : 'Fechar'}
             </Pill>
           </div>
         </div>

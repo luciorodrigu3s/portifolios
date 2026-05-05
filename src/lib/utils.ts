@@ -56,6 +56,22 @@ export function compareBy(sort: SortKey) {
         return a.name.localeCompare(b.name);
       case 'name-desc':
         return b.name.localeCompare(a.name);
+      case 'area-asc':
+        return (
+          a.area.localeCompare(b.area) || a.name.localeCompare(b.name)
+        );
+      case 'area-desc':
+        return (
+          b.area.localeCompare(a.area) || a.name.localeCompare(b.name)
+        );
+      case 'country-asc':
+        return (
+          a.country.localeCompare(b.country) || a.name.localeCompare(b.name)
+        );
+      case 'country-desc':
+        return (
+          b.country.localeCompare(a.country) || a.name.localeCompare(b.name)
+        );
       case 'quality-desc': {
         const diff = qualityToNumber(b.quality) - qualityToNumber(a.quality);
         return diff !== 0 ? diff : a.name.localeCompare(b.name);
@@ -71,15 +87,22 @@ export function compareBy(sort: SortKey) {
 export const SORT_LABELS: Record<SortKey, string> = {
   'name-asc': 'Sort: Name A→Z',
   'name-desc': 'Sort: Name Z→A',
+  'area-asc': 'Sort: Área A→Z',
+  'area-desc': 'Sort: Área Z→A',
+  'country-asc': 'Sort: País A→Z',
+  'country-desc': 'Sort: País Z→A',
   'quality-desc': 'Sort: Quality ↓',
   'quality-asc': 'Sort: Quality ↑',
 };
 
+// Quality sorts are hidden from the cycle while the quality column is hidden.
 export const SORT_CYCLE: SortKey[] = [
   'name-asc',
   'name-desc',
-  'quality-desc',
-  'quality-asc',
+  'area-asc',
+  'area-desc',
+  'country-asc',
+  'country-desc',
 ];
 
 export function nextSort(current: SortKey): SortKey {
