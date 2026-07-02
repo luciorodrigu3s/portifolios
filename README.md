@@ -29,3 +29,7 @@ data/portfolios.csv ──▶ scripts/build-data.mjs ──▶ src/data/portfoli
 ```
 
 O build **falha com mensagem legível** (linha + campo) se o CSV estiver inválido — nada quebrado chega ao ar.
+
+## Licença
+
+[MIT](./LICENSE) — use, copie e adapte à vontade, mantendo o crédito.
