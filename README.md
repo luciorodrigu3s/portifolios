@@ -4,8 +4,6 @@ Curadoria visual de designers, estúdios e referências digitais para análise d
 
 **Site:** <https://luciorodrigu3s.github.io/portifolios/>
 
-**v2 (experimento):** <https://luciorodrigu3s.github.io/portifolios/v2/> — mesma curadoria reconstruída sobre o [moku · Minimal Design System](https://minimal-design-system.vercel.app) (adaptado). Os critérios visuais vivem em [`src/v2/DESIGN.md`](./src/v2/DESIGN.md) e os tokens em [`src/v2/styles/tokens.css`](./src/v2/styles/tokens.css); a v1 na raiz permanece intacta.
-
 ## Como atualizar a lista (sem programar)
 
 Os dados vêm de [`data/portfolios.csv`](./data/portfolios.csv). Edite o CSV pelo GitHub e o site republica sozinho.

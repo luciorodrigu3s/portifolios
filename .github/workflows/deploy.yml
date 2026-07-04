@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - claude/portfolio-index-gallery-FcIIv
-      - claude/portfolio-v2-design-system-ktdvjq
       - main
   workflow_dispatch:
 
